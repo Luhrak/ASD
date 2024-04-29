@@ -1,4 +1,4 @@
-package labore;
+package lab4;
 
 import static java.util.Arrays.asList;
 
@@ -23,16 +23,16 @@ public class BubbleSort_Laborcode {
 
 		//Solange noch Durchläufe übrig sind und Vertauschungen aufgetreten sind 
 		//setze Merker zu Vertauschungen auf "Falsch" zurück und...
-		while (durchlauf_nr > ? && swapped == ?) {
-			swapped = ?;
+		while (durchlauf_nr > 0 && swapped == true) {
+			swapped = false;
 
 			//...laufe durch die Liste, bis dahin wo noch Vertauschungen auftreten können 
 			//und vertausche Elemente, falls Links größer als Rechts, setze Merker 
-			for (int swap_index = ?; swap_index <= ?; swap_index++) {
+			for (int swap_index = 0; swap_index <= durchlauf_nr; swap_index++) {
 
-				if (liste.get(?) > liste.get(?)) {
-					liste.add(?, liste.remove(?));
-					swapped = ?;
+				if (liste.get(swap_index) > liste.get(durchlauf_nr)) {  //Links größer als rechts?
+					liste.add(swap_index, liste.remove(durchlauf_nr));  //tauschen 
+					swapped = true;
 				}
 			}
 			durchlauf_nr--;	
